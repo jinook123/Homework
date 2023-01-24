@@ -93,6 +93,7 @@ export default function Home() {
             setEmailCheckCallAPiStore();
             if(emailCheckCallApi.result === true){
                 if(userPopupPrm.mode === 'INS'){
+                    // TO-DO : 비밀번호 암호화 후 서버로 전달
                     goPostUserCreate({
                         name: userPopupPrm.name,
                         email: userPopupPrm.email,
@@ -148,6 +149,7 @@ export default function Home() {
 
     useEffect(() => {
         if(detailData !== undefined && detailData !== null && detailData !== ''){
+            // TO-DO : 비밀번호 복호화
             setUserPopupPrm(prevState => ({
                 ...prevState,
                 visible: true,
