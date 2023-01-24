@@ -149,17 +149,23 @@ export default function Home() {
 
     useEffect(() => {
         if(detailData !== undefined && detailData !== null && detailData !== ''){
-            // TO-DO : 비밀번호 복호화
-            setUserPopupPrm(prevState => ({
-                ...prevState,
-                visible: true,
-                mode: 'MOD',
-                id: detailData.id,
-                name: detailData.name, 
-                email: detailData.email, 
-                password: detailData.password, 
-                passwordConfirm: detailData.repeat_password
-            }));
+            if(detailData.result === true){
+                // TO-DO : 비밀번호 복호화
+                setUserPopupPrm(prevState => ({
+                    ...prevState,
+                    visible: true,
+                    mode: 'MOD',
+                    id: detailData.id,
+                    name: detailData.name, 
+                    email: detailData.email, 
+                    password: detailData.password, 
+                    passwordConfirm: detailData.repeat_password
+                }));
+            }
+            else {
+                alertDialog('상세조회에 실패하였습니다.', '확인');
+                return false;
+            }
         }
     }, [detailData]);
     
