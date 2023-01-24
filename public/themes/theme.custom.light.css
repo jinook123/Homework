@@ -1,0 +1,163 @@
+
+
+/* Modal */
+.modal-background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+.modal-content {
+    width: calc(100vw - 100px);
+    max-height: calc(100vh - 50px);
+    border-radius: 10px;
+    /* background-color: #fff; */
+    box-sizing: border-box;
+    overflow-y: hidden;
+    z-index: 1001;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+.modal-content .sub-page-tabs.dx-tabpanel .dx-tabpanel-tabs {
+    position: absolute;
+    top: 20px;
+    width: calc(100% - 105px);
+    background: transparent;
+}
+.modal-content .sub-page-tabs.dx-tabpanel .dx-tabs-wrapper {
+    text-align: right;
+}
+.modal-content .sub-page-tabs .dx-multiview-wrapper {
+    padding-top: 0;
+}
+.modal-content .sub-page-tabs.dx-tabpanel .dx-tabs {
+    border-bottom: 0;
+    background-color: transparent;
+}
+.modal-content .sub-page-tabs.dx-tabpanel .dx-tab {
+    min-width: 120px;
+    padding: 10px 14px 9px;
+}
+.modal-content .sub-page-tabs .dx-tab.dx-tab-selected {
+    min-width: 150px;
+}
+.modal-content .sub-page-tabs .dx-tab.dx-tab-selected .dx-tab-text {
+    font-size: 1.375rem;
+}
+.modal-content .sub-page-tabs .dx-tab-content,
+.modal-content .sub-page-tabs .dx-tab-text {
+    font-size: 1.125rem;
+    vertical-align: middle;
+}
+.modal-content .sub-contents-container {
+    height: auto;
+    padding: 0;
+    border-radius: 0;
+    border: 0;
+    white-space: normal;
+    /* overflow-y: hidden; */
+}
+.modal-content .sub-contents-container.pane-padding {
+    padding: 1rem;
+}
+.modal-content .sub-contents-container.case-nowrap,
+.modal-content .sub-contents-container.case-nowrap .form-value-text {
+    white-space: nowrap;
+}
+.modal-content .sub-contents-container.case-nowrap .dx-datagrid-borders > .dx-datagrid-headers {
+    border-top: 0 !important;
+}
+.modal-content .sub-contents-container.case-nowrap .dx-datagrid-borders > .dx-datagrid-rowsview {
+    border-left: 0 !important;
+    border-right: 0 !important;
+}
+.modal-content .sub-contents-container.case-nowrap .paging > div {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.modal-content .sub-contents-container.case-nowrap .form-container .row {
+    flex-wrap: nowrap;
+}
+.modal-content .sub-contents-container .search-container {
+    padding: 0.5rem 1rem;
+}
+.modal-content .sub-header {
+    margin-bottom: 0;
+    padding: 0.75rem 1.5rem;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #fff;
+}
+.modal-content .sub-header .dx-button {
+    min-height: auto;
+    box-shadow: none;
+}
+.modal-content .sub-header .dx-button .dx-icon {
+    color: #333;
+}
+.modal-content .sub-header.depth2 {
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: 0;
+}
+.modal-content .sub-header.depth2.form-height {
+    padding-bottom: 1rem;
+}
+.modal-content .sub-header.bg-primary {
+    background-color: #5a6def;
+    color: #fff;
+}
+.modal-content .sub-header.bg-primary .sub-title {
+    padding-left: 0;
+}
+.modal-content .sub-header.bg-primary .sub-title::before {
+    display: none;
+}
+.modal-content .sub-header.bg-primary .dx-button {
+    background-color: transparent;
+}
+.modal-content .sub-header.bg-primary .dx-button .dx-icon {
+    color: #fff;
+}
+.modal-content .modal-content-body {
+    max-height: calc(100vh - 175px);
+    padding: 1.5rem;
+    background-color: #fff;
+    overflow-y: auto;
+}
+.modal-content .modal-content-body.case-2 {
+    /* case-2 클래스는 bottom의 버튼 영역이 modal-content-body 안쪽에 있을때 사용 */
+    max-height: calc(100vh - 116px);
+    padding-bottom: 0;
+}
+.modal-content .modal-content-body.case-3 {
+    /* case-3 클래스는 bottom의 버튼 영역을 쓰지 않을때 사용 */
+    max-height: calc(100vh - 120px);
+}
+.modal-content .modal-content-body .modal-content-body {
+    padding: 0 0 1.5rem;
+    overflow: visible;
+    max-height: none;
+}
+.modal-content .modal-content-body .sub-header {
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: 0;
+}
+.modal-content .modal-content-body .column-item-bottom {
+    margin-bottom: -1.5rem;
+}
+.modal-content .button-container {
+    border-top: 1px solid #e5e5e5;
+    padding: 0.875rem 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #fff;
+}
